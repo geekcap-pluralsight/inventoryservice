@@ -71,11 +71,11 @@ class InventoryServiceTest {
 
     @Test
     void testPurchaseProductSuccess() {
-        Optional<InventoryRecord> record = service.purchaseProduct(1, 1);
+        Optional<InventoryRecord> record = service.purchaseProduct(1, 5);
         Assertions.assertTrue(record.isPresent(), "InventoryRecord should be present");
 
         // Validate the contents of the response
-        Assertions.assertEquals(499, record.get().getQuantity().intValue(),
-                "The quantity should be 499");
+        Assertions.assertEquals(495, record.get().getQuantity().intValue(),
+                "The quantity should be 495");
     }
 }
